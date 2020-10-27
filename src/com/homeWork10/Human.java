@@ -44,4 +44,9 @@ public class Human {
         Human h = (Human)obj;
         return h.name == name && h.surname == surname && h.age == age;
     }
+
+    @Override
+    public String toString() {
+        return name+" "+surname+" "+age;
+    }
 }
