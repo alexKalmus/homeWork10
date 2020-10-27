@@ -1,5 +1,7 @@
 package com.homeWork10;
 
+import java.util.Objects;
+
 public class Human {
     private String name;
     private String surname;
@@ -35,4 +37,11 @@ public class Human {
         this.age = age;
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) return false;
+        if (!(obj instanceof Human)) return false;
+        Human h = (Human)obj;
+        return h.name == name && h.surname == surname && h.age == age;
+    }
 }
